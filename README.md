@@ -1,7 +1,7 @@
-## PIME: Prevalence Interval for Microbiome Evaluation
+# PIME: Prevalence Interval for Microbiome Evaluation
 PIME removes the within group variation found in metataxonomic surveys (16S rRNA datasets) by capturing only biological differences at high sample prevalence levels.
 
-## How to install PIME package
+# How to install PIME package
 
 To install PIME first install the devtools package. 
 Then load the library(devtools) and run install_github using the following commands.
@@ -12,7 +12,7 @@ install_github("microEcology/pime")
 ```
 PIME uses a Phyloseq object as input. A description of the phyloseq object and a tutorial on how to create this file in R using OTU tables in many different formats is detailed into the Phyloseq website https://joey711.github.io/phyloseq/ 
 
-## Step-by-step example
+# Step-by-step example
 The first step in PIME is to define if the microbial community presents a high relative abundance of taxa with low prevalence, which is considered as noise in PIME analysis. This is calculated by Random Forests analysis. In this example we run PIME using the restroom dataset (https://doi.org/10.1007%2Fs10482-017-0976-6) against the metadata variable called Environment (a variable with two categories: men’s and women’s restroom). 
 
 Prediction using random forests on full dataset. Results in Out of Bag erro rate. The input file was rarefied at 500 sequences for the purpose of this example (speed up the analysis). Using a rarefied dataset is recomended at this step.
