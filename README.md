@@ -1,6 +1,9 @@
 ## How to install PIME package
 
-To install PIME Package first install the devtools package, install.packages("devtools"). Then run
+To install PIME Package first install the devtools package, install.packages("devtools"). 
+Then load the library
+library(devtools)
+and run
 install_github("microEcology/pime")
 pime uses a Phyloseq object as input. A description of the phyloseq object and a tutorial on how to create this file in R using OTU tables in many different formats is detailed into the Phyloseq website https://joey711.github.io/phyloseq/ 
 
