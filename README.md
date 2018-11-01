@@ -9,10 +9,10 @@ install_github("microEcology/pime")
 ```
 PIME uses a Phyloseq object as input. A description of the phyloseq object and a tutorial on how to create this file in R using OTU tables in many different formats is detailed into the Phyloseq website https://joey711.github.io/phyloseq/ 
 
-##Step-by-step example.
-The first step in PIME is to define whether the microbial community presents a high relative abundance of taxa with low prevalence, which is defined as noise in PIME analysis. This is defined by Random Forests analysis. In this example we run PIME using the restroom dataset (https://doi.org/10.1007%2Fs10482-017-0976-6) against the metadata variable called Environment (a variable with two categories: men’s and women’s restroom). 
+## Step-by-step example.
+The first step in PIME is to define if the microbial community presents a high relative abundance of taxa with low prevalence, which is considered as noise in PIME analysis. This is calculated by Random Forests analysis. In this example we run PIME using the restroom dataset (https://doi.org/10.1007%2Fs10482-017-0976-6) against the metadata variable called Environment (a variable with two categories: men’s and women’s restroom). 
 
-The prediction using random forests trees on full dataset. Results in Out of Bag erro rate
+Prediction using random forests on full dataset. Results in Out of Bag erro rate
 ```{r}
 library(pime)
 data("restroom")
