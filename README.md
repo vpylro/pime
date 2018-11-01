@@ -9,17 +9,17 @@ install_github("microEcology/pime")
 ```
 PIME uses a Phyloseq object as input. A description of the phyloseq object and a tutorial on how to create this file in R using OTU tables in many different formats is detailed into the Phyloseq website https://joey711.github.io/phyloseq/ 
 
-## Step-by-step example.
+## Step-by-step example
 The first step in PIME is to define if the microbial community presents a high relative abundance of taxa with low prevalence, which is considered as noise in PIME analysis. This is calculated by Random Forests analysis. In this example we run PIME using the restroom dataset (https://doi.org/10.1007%2Fs10482-017-0976-6) against the metadata variable called Environment (a variable with two categories: men’s and women’s restroom). 
 
-Prediction using random forests on full dataset. Results in Out of Bag erro rate
+Prediction using random forests on full dataset. Results in Out of Bag erro rate. The input file was rarefied at 500 sequences for the purpose of this example (speed up the analysis). Using a rarefied dataset is recomended at this step.
 ```{r}
 library(pime)
 data("restroom")
 pime.oob.error(restroom, "Environment")
 ```
-If the OOB error rate <=0.1, the dataset present large differences, and pime might not be necessary. 
-If the OOB error rate is greater, next functions will find the best prevalence interval for the dataset.
+The OOB error rate <=0.1, indicated the dataset present large differences, and pime might notremove much of the noise. 
+Higher OOB error rate indicates that the next functions should be run to find the best prevalence interval for the dataset.
 This function takes two parameters: The phyloseq object (restroom) and the predictor variable (Environment).
 
 ## Split the dataset by predictor variable
