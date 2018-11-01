@@ -65,3 +65,22 @@ To estimate error in prediction, we will use pime.error.prediction() to randomly
 It is also possible to estimate the variation of OOB error with each prevalence interval fintering. This is done by running the random forests classification for n times, determined by the user. This function will return a boxplot figure and a table for each classificaiton error.
 ```{r}
 replicated.oob.error= pime.oob.replicate(prevalences, "Environment", bootstrap = 10, parallel = TRUE)
+
+
+## Getting Help
+
+Please contact us if you need any help: *contact@brmicrobiome.org*
+
+
+# PIME Team
+
+Luiz F. W. Roesch (Universidade Federal do Pampa - Brazil)
+Priscila T. Dobbler (Universidade Federal do Pampa - Brazil)
+Victor S. Pylro (Universidade Federal de Lavras - Brazil)
+Bryan Kolaczkowski (University of Florida - United States of America)
+Jennifer C. Drew (University of Florida - United States of America)
+Eric W. Triplett (University of Florida - United States of America)
+
+# Citation
+
+Roesch et al. (2018), PIME: including the concept of prevalence for uncovering differences in microbiome noised data. Nature Methods, submitted.
