@@ -1,3 +1,6 @@
+## PIME: Prevalence interval for Microbiome Evaluation
+PIME removes the within group variation found in metataxonomic surveys (16S rRNA datasets) by capturing only biological differences at high sample prevalence levels.
+
 ## How to install PIME package
 
 To install PIME first install the devtools package. 
