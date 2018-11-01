@@ -26,7 +26,10 @@ pime.oob.error= function(physeq, variable,...){
   training.set <- data.frame(response, train)
   train.model = ranger::ranger(response ~ ., data = training.set,...)
   res=train.model$prediction.error
-  if (res <=0.01) {print("OOB error rate is zero. Your dataset presents large differences.
-                      Prevalence evaluation might not be necessary")
-  } else {return(res)}
+  if (res <=0.01) {
+    print("OOB error rate <=0.01 . Your dataset presents large differences. Prevalence evaluation might not be necessary")
+    return(res)
+  } else {
+    return(res)
+    }
 }
