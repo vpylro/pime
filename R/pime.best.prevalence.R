@@ -19,7 +19,6 @@
 #' @importFrom phyloseq "sample_data"
 #'@export
 pime.best.prevalence = function (prev.list, variable, method.dist="bray",...) {
-  set.seed(2125)
   perm=list()
   randon=list()
   gs <- as(object = sample_data(prev.list[[1]]), Class = "data.frame")
@@ -45,9 +44,9 @@ pime.best.prevalence = function (prev.list, variable, method.dist="bray",...) {
   #gets only the first line, all columns of every table inside Lista
   results1 <- do.call(rbind, lapply(perm,`[`,1,))
   Interval= paste(as.numeric(names(prev.list)), "%", sep = "")
-  results2 <- do.call(rbind, randon)
+  OOBerror <- do.call(rbind, randon)
   Nseqs=sapply(prev.list, function(z) sum(phyloseq::sample_sums(z)))
   OTUs=sapply(prev.list, phyloseq::ntaxa)
-  OOB.err=cbind(results1,results2,Interval,OTUs,Nseqs)
+  OOB.err=cbind(results1,OOBerror,Interval,OTUs,Nseqs)
   return(OOB.err)
 }
