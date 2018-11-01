@@ -75,10 +75,15 @@ Please contact us if you need any help: *contact@brmicrobiome.org*
 # PIME Team
 
 Luiz F. W. Roesch (Universidade Federal do Pampa - Brazil)
+
 Priscila T. Dobbler (Universidade Federal do Pampa - Brazil)
+
 Victor S. Pylro (Universidade Federal de Lavras - Brazil)
+
 Bryan Kolaczkowski (University of Florida - United States of America)
+
 Jennifer C. Drew (University of Florida - United States of America)
+
 Eric W. Triplett (University of Florida - United States of America)
 
 # Citation
